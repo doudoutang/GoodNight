@@ -23,11 +23,13 @@
 		C24A9A291B85711700371E58 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A141B85711700371E58 /* SDCycleScrollView.m */; };
 		C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A161B85711700371E58 /* UIView+SDExtension.m */; };
 		C24A9A2B1B85711700371E58 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A191B85711700371E58 /* MusicViewController.m */; };
-		C24A9A2C1B85711700371E58 /* ReadCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */; };
 		C24A9A311B8580CA00371E58 /* ReadFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */; };
 		C24A9A341B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */; };
-		C24A9A361B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
 		C24A9A381B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
+		C24A9A4E1B85CEAB00371E58 /* ReadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A4C1B85CEAB00371E58 /* ReadTableViewCell.m */; };
+		C24A9A4F1B85CEAB00371E58 /* ReadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A4D1B85CEAB00371E58 /* ReadTableViewCell.xib */; };
+		C24A9A531B85CEF300371E58 /* ReadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A511B85CEF300371E58 /* ReadTableViewController.m */; };
+		C24A9A541B85CEF300371E58 /* ReadTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A521B85CEF300371E58 /* ReadTableViewController.xib */; };
 		C29307021B84BC4A000A3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29307011B84BC4A000A3DEF /* main.m */; };
 		C293070B1B84BC4A000A3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29307091B84BC4A000A3DEF /* Main.storyboard */; };
 		C293070D1B84BC4A000A3DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C293070C1B84BC4A000A3DEF /* Images.xcassets */; };
@@ -83,13 +85,16 @@
 		C24A9A161B85711700371E58 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		C24A9A181B85711700371E58 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		C24A9A191B85711700371E58 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
-		C24A9A1A1B85711700371E58 /* ReadCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadCollectionViewController.h; sourceTree = "<group>"; };
-		C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadCollectionViewController.m; sourceTree = "<group>"; };
 		C24A9A2F1B8580CA00371E58 /* ReadFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFlowLayout.h; sourceTree = "<group>"; };
 		C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFlowLayout.m; sourceTree = "<group>"; };
 		C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "X36UZ[4YS`8RUSIL%DZC(56.jpg"; sourceTree = "<group>"; };
-		C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
 		C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
+		C24A9A4B1B85CEAB00371E58 /* ReadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadTableViewCell.h; sourceTree = "<group>"; };
+		C24A9A4C1B85CEAB00371E58 /* ReadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadTableViewCell.m; sourceTree = "<group>"; };
+		C24A9A4D1B85CEAB00371E58 /* ReadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadTableViewCell.xib; sourceTree = "<group>"; };
+		C24A9A501B85CEF300371E58 /* ReadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadTableViewController.h; sourceTree = "<group>"; };
+		C24A9A511B85CEF300371E58 /* ReadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadTableViewController.m; sourceTree = "<group>"; };
+		C24A9A521B85CEF300371E58 /* ReadTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadTableViewController.xib; sourceTree = "<group>"; };
 		C29306FC1B84BC4A000A3DEF /* GoodNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29307001B84BC4A000A3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C29307011B84BC4A000A3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -235,8 +240,9 @@
 				C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */,
 				C24A9A181B85711700371E58 /* MusicViewController.h */,
 				C24A9A191B85711700371E58 /* MusicViewController.m */,
-				C24A9A1A1B85711700371E58 /* ReadCollectionViewController.h */,
-				C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */,
+				C24A9A501B85CEF300371E58 /* ReadTableViewController.h */,
+				C24A9A511B85CEF300371E58 /* ReadTableViewController.m */,
+				C24A9A521B85CEF300371E58 /* ReadTableViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 		C24A9A1C1B85711700371E58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */,
+				C24A9A4B1B85CEAB00371E58 /* ReadTableViewCell.h */,
+				C24A9A4C1B85CEAB00371E58 /* ReadTableViewCell.m */,
+				C24A9A4D1B85CEAB00371E58 /* ReadTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,7 +413,6 @@
 				C2F0F8961B8576530074653A /* wanan.png in Resources */,
 				C293070B1B84BC4A000A3DEF /* Main.storyboard in Resources */,
 				C24A9A341B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg in Resources */,
-				C24A9A361B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */,
 				C24A9A211B85711700371E58 /* h3.jpg in Resources */,
 				C24A9A221B85711700371E58 /* h4.jpg in Resources */,
 				C24A9A381B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */,
@@ -417,8 +424,10 @@
 				C2C3BE581B8578C5002C975D /* sleepStrip.png in Resources */,
 				C293070D1B84BC4A000A3DEF /* Images.xcassets in Resources */,
 				C2F0F8621B8575010074653A /* LaunchScreen.xib in Resources */,
+				C24A9A4F1B85CEAB00371E58 /* ReadTableViewCell.xib in Resources */,
 				C2289FD61B85AE19005F39B6 /* DiaryViewController.xib in Resources */,
 				C2F0F85B1B8574CE0074653A /* HomeViewController.xib in Resources */,
+				C24A9A541B85CEF300371E58 /* ReadTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,13 +452,14 @@
 				C2F0F85F1B8574E10074653A /* SleepRecordViewController.m in Sources */,
 				C24A9A251B85711700371E58 /* TAAnimatedDotView.m in Sources */,
 				C2F0F85A1B8574CE0074653A /* HomeViewController.m in Sources */,
-				C24A9A2C1B85711700371E58 /* ReadCollectionViewController.m in Sources */,
 				C2289FD51B85AE19005F39B6 /* DiaryViewController.m in Sources */,
 				C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */,
 				C29307021B84BC4A000A3DEF /* main.m in Sources */,
 				C24A9A271B85711700371E58 /* TAPageControl.m in Sources */,
 				C24A9A311B8580CA00371E58 /* ReadFlowLayout.m in Sources */,
 				C24A9A231B85711700371E58 /* NSData+SDDataCache.m in Sources */,
+				C24A9A531B85CEF300371E58 /* ReadTableViewController.m in Sources */,
+				C24A9A4E1B85CEAB00371E58 /* ReadTableViewCell.m in Sources */,
 				C24A9A281B85711700371E58 /* SDCollectionViewCell.m in Sources */,
 				C24A9A291B85711700371E58 /* SDCycleScrollView.m in Sources */,
 			);

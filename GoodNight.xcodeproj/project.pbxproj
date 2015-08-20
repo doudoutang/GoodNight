@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C24A9A1D1B85711700371E58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A99F91B85711700371E58 /* AppDelegate.m */; };
-		C24A9A1E1B85711700371E58 /* ReadFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A99FE1B85711700371E58 /* ReadFlowLayout.m */; };
 		C24A9A1F1B85711700371E58 /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A021B85711700371E58 /* h1.jpg */; };
 		C24A9A201B85711700371E58 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A031B85711700371E58 /* h2.jpg */; };
 		C24A9A211B85711700371E58 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A041B85711700371E58 /* h3.jpg */; };
@@ -23,6 +22,10 @@
 		C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A161B85711700371E58 /* UIView+SDExtension.m */; };
 		C24A9A2B1B85711700371E58 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A191B85711700371E58 /* MusicViewController.m */; };
 		C24A9A2C1B85711700371E58 /* ReadCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */; };
+		C24A9A311B8580CA00371E58 /* ReadFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */; };
+		C24A9A341B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */; };
+		C24A9A361B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
+		C24A9A381B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
 		C29307021B84BC4A000A3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29307011B84BC4A000A3DEF /* main.m */; };
 		C293070B1B84BC4A000A3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29307091B84BC4A000A3DEF /* Main.storyboard */; };
 		C293070D1B84BC4A000A3DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C293070C1B84BC4A000A3DEF /* Images.xcassets */; };
@@ -54,8 +57,6 @@
 /* Begin PBXFileReference section */
 		C24A99F81B85711700371E58 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C24A99F91B85711700371E58 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C24A99FD1B85711700371E58 /* ReadFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFlowLayout.h; sourceTree = "<group>"; };
-		C24A99FE1B85711700371E58 /* ReadFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFlowLayout.m; sourceTree = "<group>"; };
 		C24A9A021B85711700371E58 /* h1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h1.jpg; sourceTree = "<group>"; };
 		C24A9A031B85711700371E58 /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
 		C24A9A041B85711700371E58 /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
@@ -80,6 +81,11 @@
 		C24A9A191B85711700371E58 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		C24A9A1A1B85711700371E58 /* ReadCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadCollectionViewController.h; sourceTree = "<group>"; };
 		C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadCollectionViewController.m; sourceTree = "<group>"; };
+		C24A9A2F1B8580CA00371E58 /* ReadFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFlowLayout.h; sourceTree = "<group>"; };
+		C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFlowLayout.m; sourceTree = "<group>"; };
+		C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "X36UZ[4YS`8RUSIL%DZC(56.jpg"; sourceTree = "<group>"; };
+		C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
+		C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
 		C29306FC1B84BC4A000A3DEF /* GoodNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29307001B84BC4A000A3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C29307011B84BC4A000A3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,13 +131,11 @@
 		C24A99F61B85711700371E58 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C24A9A321B8580D300371E58 /* Resourse */,
 				C24A99F71B85711700371E58 /* AppDelegate */,
 				C24A99FA1B85711700371E58 /* Handles */,
 				C24A99FB1B85711700371E58 /* Macro */,
 				C24A99FC1B85711700371E58 /* Models */,
-				C24A99FD1B85711700371E58 /* ReadFlowLayout.h */,
-				C24A99FE1B85711700371E58 /* ReadFlowLayout.m */,
-				C24A99FF1B85711700371E58 /* Resource */,
 				C24A9A001B85711700371E58 /* ThirdPartys */,
 				C24A9A171B85711700371E58 /* ViewControllers */,
 				C24A9A1C1B85711700371E58 /* Views */,
@@ -158,6 +162,7 @@
 		C24A99FB1B85711700371E58 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
+				C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -165,15 +170,10 @@
 		C24A99FC1B85711700371E58 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C24A9A2F1B8580CA00371E58 /* ReadFlowLayout.h */,
+				C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C24A99FF1B85711700371E58 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		C24A9A001B85711700371E58 /* ThirdPartys */ = {
@@ -246,8 +246,17 @@
 		C24A9A1C1B85711700371E58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C24A9A321B8580D300371E58 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 		C29306F31B84BC4A000A3DEF = {
@@ -390,8 +399,11 @@
 				C24A9A201B85711700371E58 /* h2.jpg in Resources */,
 				C2F0F8961B8576530074653A /* wanan.png in Resources */,
 				C293070B1B84BC4A000A3DEF /* Main.storyboard in Resources */,
+				C24A9A341B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg in Resources */,
+				C24A9A361B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */,
 				C24A9A211B85711700371E58 /* h3.jpg in Resources */,
 				C24A9A221B85711700371E58 /* h4.jpg in Resources */,
+				C24A9A381B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */,
 				C2F0F8951B8576530074653A /* sayImage.png in Resources */,
 				C24A9A1F1B85711700371E58 /* h1.jpg in Resources */,
 				C2F0F8931B8576530074653A /* sleepBackImage.png in Resources */,
@@ -430,8 +442,8 @@
 				C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */,
 				C29307021B84BC4A000A3DEF /* main.m in Sources */,
 				C24A9A271B85711700371E58 /* TAPageControl.m in Sources */,
+				C24A9A311B8580CA00371E58 /* ReadFlowLayout.m in Sources */,
 				C24A9A231B85711700371E58 /* NSData+SDDataCache.m in Sources */,
-				C24A9A1E1B85711700371E58 /* ReadFlowLayout.m in Sources */,
 				C24A9A281B85711700371E58 /* SDCollectionViewCell.m in Sources */,
 				C24A9A291B85711700371E58 /* SDCycleScrollView.m in Sources */,
 			);

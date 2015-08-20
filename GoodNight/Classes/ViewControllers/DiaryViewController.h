@@ -1,5 +1,5 @@
 //
-//  ReadCollectionViewCell.h
+//  DiaryViewController.h
 //  GoodNight
 //
 //  Created by lanou3g on 15/8/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReadCollectionViewCell : UICollectionViewCell
+@interface DiaryViewController : UIViewController
 
 @end

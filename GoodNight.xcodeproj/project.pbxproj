@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2289FD51B85AE19005F39B6 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2289FD31B85AE19005F39B6 /* DiaryViewController.m */; };
+		C2289FD61B85AE19005F39B6 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */; };
 		C24A9A1D1B85711700371E58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A99F91B85711700371E58 /* AppDelegate.m */; };
 		C24A9A1F1B85711700371E58 /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A021B85711700371E58 /* h1.jpg */; };
 		C24A9A201B85711700371E58 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A031B85711700371E58 /* h2.jpg */; };
@@ -21,12 +23,11 @@
 		C24A9A291B85711700371E58 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A141B85711700371E58 /* SDCycleScrollView.m */; };
 		C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A161B85711700371E58 /* UIView+SDExtension.m */; };
 		C24A9A2B1B85711700371E58 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A191B85711700371E58 /* MusicViewController.m */; };
+		C24A9A2C1B85711700371E58 /* ReadCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */; };
 		C24A9A311B8580CA00371E58 /* ReadFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */; };
 		C24A9A341B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */; };
 		C24A9A361B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
 		C24A9A381B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */; };
-		C24A9A3F1B85AF9D00371E58 /* ReadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9A3D1B85AF9D00371E58 /* ReadCollectionViewCell.m */; };
-		C24A9A401B85AF9D00371E58 /* ReadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24A9A3E1B85AF9D00371E58 /* ReadCollectionViewCell.xib */; };
 		C29307021B84BC4A000A3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29307011B84BC4A000A3DEF /* main.m */; };
 		C293070B1B84BC4A000A3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29307091B84BC4A000A3DEF /* Main.storyboard */; };
 		C293070D1B84BC4A000A3DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C293070C1B84BC4A000A3DEF /* Images.xcassets */; };
@@ -35,7 +36,6 @@
 		C2F0F85A1B8574CE0074653A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F8581B8574CE0074653A /* HomeViewController.m */; };
 		C2F0F85B1B8574CE0074653A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F8591B8574CE0074653A /* HomeViewController.xib */; };
 		C2F0F85F1B8574E10074653A /* SleepRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F85D1B8574E10074653A /* SleepRecordViewController.m */; };
-		C2F0F8601B8574E10074653A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F85E1B8574E10074653A /* Main.storyboard */; };
 		C2F0F8621B8575010074653A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F8611B8575010074653A /* LaunchScreen.xib */; };
 		C2F0F8911B8576530074653A /* HomeBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F88B1B8576530074653A /* HomeBack.jpg */; };
 		C2F0F8921B8576530074653A /* startBackImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F88C1B8576530074653A /* startBackImage.jpg */; };
@@ -56,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2289FD21B85AE19005F39B6 /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
+		C2289FD31B85AE19005F39B6 /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
+		C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryViewController.xib; sourceTree = "<group>"; };
 		C24A99F81B85711700371E58 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C24A99F91B85711700371E58 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C24A9A021B85711700371E58 /* h1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h1.jpg; sourceTree = "<group>"; };
@@ -80,14 +83,13 @@
 		C24A9A161B85711700371E58 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		C24A9A181B85711700371E58 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		C24A9A191B85711700371E58 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		C24A9A1A1B85711700371E58 /* ReadCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadCollectionViewController.h; sourceTree = "<group>"; };
+		C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadCollectionViewController.m; sourceTree = "<group>"; };
 		C24A9A2F1B8580CA00371E58 /* ReadFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFlowLayout.h; sourceTree = "<group>"; };
 		C24A9A301B8580CA00371E58 /* ReadFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFlowLayout.m; sourceTree = "<group>"; };
 		C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "X36UZ[4YS`8RUSIL%DZC(56.jpg"; sourceTree = "<group>"; };
 		C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
 		C24A9A371B8582EB00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "[EMC)E12U73I[5F3H[LVB~E.gif"; sourceTree = "<group>"; };
-		C24A9A3C1B85AF9D00371E58 /* ReadCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadCollectionViewCell.h; sourceTree = "<group>"; };
-		C24A9A3D1B85AF9D00371E58 /* ReadCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadCollectionViewCell.m; sourceTree = "<group>"; };
-		C24A9A3E1B85AF9D00371E58 /* ReadCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadCollectionViewCell.xib; sourceTree = "<group>"; };
 		C29306FC1B84BC4A000A3DEF /* GoodNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29307001B84BC4A000A3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C29307011B84BC4A000A3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,20 +98,19 @@
 		C29307151B84BC4A000A3DEF /* GoodNightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodNightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C293071A1B84BC4A000A3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C293071B1B84BC4A000A3DEF /* GoodNightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodNightTests.m; sourceTree = "<group>"; };
-		C2C3BE571B8578C5002C975D /* sleepStrip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleepStrip.png; sourceTree = "<group>"; };
+		C2C3BE571B8578C5002C975D /* sleepStrip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sleepStrip.png; path = ../ViewControllers/sleepStrip.png; sourceTree = "<group>"; };
 		C2F0F8571B8574CE0074653A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C2F0F8581B8574CE0074653A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C2F0F8591B8574CE0074653A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C2F0F85C1B8574E10074653A /* SleepRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepRecordViewController.h; sourceTree = "<group>"; };
 		C2F0F85D1B8574E10074653A /* SleepRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepRecordViewController.m; sourceTree = "<group>"; };
-		C2F0F85E1B8574E10074653A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2F0F8611B8575010074653A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		C2F0F88B1B8576530074653A /* HomeBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HomeBack.jpg; sourceTree = "<group>"; };
-		C2F0F88C1B8576530074653A /* startBackImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startBackImage.jpg; sourceTree = "<group>"; };
-		C2F0F88D1B8576530074653A /* sleepBackImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleepBackImage.png; sourceTree = "<group>"; };
-		C2F0F88E1B8576530074653A /* katong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = katong.png; sourceTree = "<group>"; };
-		C2F0F88F1B8576530074653A /* sayImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sayImage.png; sourceTree = "<group>"; };
-		C2F0F8901B8576530074653A /* wanan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wanan.png; sourceTree = "<group>"; };
+		C2F0F88B1B8576530074653A /* HomeBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HomeBack.jpg; path = ../ViewControllers/HomeBack.jpg; sourceTree = "<group>"; };
+		C2F0F88C1B8576530074653A /* startBackImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = startBackImage.jpg; path = ../ViewControllers/startBackImage.jpg; sourceTree = "<group>"; };
+		C2F0F88D1B8576530074653A /* sleepBackImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sleepBackImage.png; path = ../ViewControllers/sleepBackImage.png; sourceTree = "<group>"; };
+		C2F0F88E1B8576530074653A /* katong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = katong.png; path = ../ViewControllers/katong.png; sourceTree = "<group>"; };
+		C2F0F88F1B8576530074653A /* sayImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sayImage.png; path = ../ViewControllers/sayImage.png; sourceTree = "<group>"; };
+		C2F0F8901B8576530074653A /* wanan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wanan.png; path = ../ViewControllers/wanan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,19 +227,16 @@
 			children = (
 				C2F0F85C1B8574E10074653A /* SleepRecordViewController.h */,
 				C2F0F85D1B8574E10074653A /* SleepRecordViewController.m */,
-				C2F0F85E1B8574E10074653A /* Main.storyboard */,
 				C2F0F8571B8574CE0074653A /* HomeViewController.h */,
 				C2F0F8581B8574CE0074653A /* HomeViewController.m */,
 				C2F0F8591B8574CE0074653A /* HomeViewController.xib */,
+				C2289FD21B85AE19005F39B6 /* DiaryViewController.h */,
+				C2289FD31B85AE19005F39B6 /* DiaryViewController.m */,
+				C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */,
 				C24A9A181B85711700371E58 /* MusicViewController.h */,
 				C24A9A191B85711700371E58 /* MusicViewController.m */,
-				C2F0F88B1B8576530074653A /* HomeBack.jpg */,
-				C2F0F88C1B8576530074653A /* startBackImage.jpg */,
-				C2F0F88D1B8576530074653A /* sleepBackImage.png */,
-				C2F0F88E1B8576530074653A /* katong.png */,
-				C2F0F88F1B8576530074653A /* sayImage.png */,
-				C2F0F8901B8576530074653A /* wanan.png */,
-				C2C3BE571B8578C5002C975D /* sleepStrip.png */,
+				C24A9A1A1B85711700371E58 /* ReadCollectionViewController.h */,
+				C24A9A1B1B85711700371E58 /* ReadCollectionViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -247,9 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				C24A9A351B8582DD00371E58 /* [EMC)E12U73I[5F3H[LVB~E.gif */,
-				C24A9A3C1B85AF9D00371E58 /* ReadCollectionViewCell.h */,
-				C24A9A3D1B85AF9D00371E58 /* ReadCollectionViewCell.m */,
-				C24A9A3E1B85AF9D00371E58 /* ReadCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +252,13 @@
 		C24A9A321B8580D300371E58 /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				C2F0F88B1B8576530074653A /* HomeBack.jpg */,
+				C2F0F88C1B8576530074653A /* startBackImage.jpg */,
+				C2F0F88D1B8576530074653A /* sleepBackImage.png */,
+				C2F0F88E1B8576530074653A /* katong.png */,
+				C2F0F88F1B8576530074653A /* sayImage.png */,
+				C2F0F8901B8576530074653A /* wanan.png */,
+				C2C3BE571B8578C5002C975D /* sleepStrip.png */,
 				C24A9A331B8580D300371E58 /* X36UZ[4YS`8RUSIL%DZC(56.jpg */,
 			);
 			path = Resourse;
@@ -412,11 +414,10 @@
 				C2F0F8931B8576530074653A /* sleepBackImage.png in Resources */,
 				C2F0F8941B8576530074653A /* katong.png in Resources */,
 				C2F0F8911B8576530074653A /* HomeBack.jpg in Resources */,
-				C24A9A401B85AF9D00371E58 /* ReadCollectionViewCell.xib in Resources */,
-				C2F0F8601B8574E10074653A /* Main.storyboard in Resources */,
 				C2C3BE581B8578C5002C975D /* sleepStrip.png in Resources */,
 				C293070D1B84BC4A000A3DEF /* Images.xcassets in Resources */,
 				C2F0F8621B8575010074653A /* LaunchScreen.xib in Resources */,
+				C2289FD61B85AE19005F39B6 /* DiaryViewController.xib in Resources */,
 				C2F0F85B1B8574CE0074653A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,8 +442,9 @@
 				C24A9A241B85711700371E58 /* TAAbstractDotView.m in Sources */,
 				C2F0F85F1B8574E10074653A /* SleepRecordViewController.m in Sources */,
 				C24A9A251B85711700371E58 /* TAAnimatedDotView.m in Sources */,
-				C24A9A3F1B85AF9D00371E58 /* ReadCollectionViewCell.m in Sources */,
 				C2F0F85A1B8574CE0074653A /* HomeViewController.m in Sources */,
+				C24A9A2C1B85711700371E58 /* ReadCollectionViewController.m in Sources */,
+				C2289FD51B85AE19005F39B6 /* DiaryViewController.m in Sources */,
 				C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */,
 				C29307021B84BC4A000A3DEF /* main.m in Sources */,
 				C24A9A271B85711700371E58 /* TAPageControl.m in Sources */,

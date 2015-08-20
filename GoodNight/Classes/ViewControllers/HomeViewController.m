@@ -9,7 +9,6 @@
 #import "HomeViewController.h"
 #import "SleepRecordViewController.h"
 #import "MusicViewController.h"
-#import "ReadCollectionViewController.h"
 @interface HomeViewController ()
 - (IBAction)startSleep:(UIButton *)sender;
 - (IBAction)mySleep:(UIButton *)sender;
@@ -70,7 +69,6 @@
 }
 
 - (IBAction)chickenSoup:(UIButton *)sender {
-    ReadCollectionViewController * readVC = [[ReadCollectionViewController alloc]init];
-    [self.navigationController pushViewController:readVC animated:YES];
+    
 }
 @end

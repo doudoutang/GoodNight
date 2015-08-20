@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MusicViewController.h"
-#import "ReadCollectionViewController.h"
 #import "HomeViewController.h"
 @interface AppDelegate ()
 

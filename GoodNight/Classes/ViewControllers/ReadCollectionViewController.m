@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
 //    layout.minimumLineSpacing = 50;
     
     layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
-    
+    //lalal
     return [super initWithCollectionViewLayout:layout];
 }
 

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MusicViewController.h"
 #import "ReadCollectionViewController.h"
+#import "HomeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,10 +21,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MusicViewController *musicVC = [[MusicViewController alloc] init];
+    HomeViewController * homeVC = [[HomeViewController alloc]init];
+    UINavigationController * rootVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    _window.rootViewController = rootVC;
     
-    ReadCollectionViewController *readCVC = [[ReadCollectionViewController alloc] init];
-    self.window.rootViewController = readCVC;
     
     [self.window makeKeyAndVisible];
     

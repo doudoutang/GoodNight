@@ -10,6 +10,7 @@
 #import "SleepRecordViewController.h"
 #import "MusicViewController.h"
 #import "ReadCollectionViewController.h"
+#import "DiaryViewController.h"
 @interface HomeViewController ()
 - (IBAction)startSleep:(UIButton *)sender;
 - (IBAction)mySleep:(UIButton *)sender;
@@ -53,12 +54,8 @@
 }
 
 - (IBAction)feelingStory:(UIButton *)sender {
-    
-    
-    
-    
-    
-    
+    DiaryViewController * diary = [[DiaryViewController alloc]init];
+    [self.navigationController pushViewController:diary animated:YES];
     
 }
 

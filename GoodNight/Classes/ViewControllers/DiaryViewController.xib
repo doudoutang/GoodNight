@@ -16,8 +16,23 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5p-cK-y2A">
                     <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-1o-ymm">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                            <state key="normal" title="记录下今天的心情吧">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="addDiary:" destination="-1" eventType="touchUpInside" id="HP1-S0-5fT"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" red="0.65068280820000002" green="0.95129534510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Tdm-1o-ymm" secondAttribute="bottom" id="8GI-3J-Pra"/>
+                        <constraint firstItem="Tdm-1o-ymm" firstAttribute="leading" secondItem="s5p-cK-y2A" secondAttribute="leading" id="9Xe-VK-L4x"/>
+                        <constraint firstItem="Tdm-1o-ymm" firstAttribute="top" secondItem="s5p-cK-y2A" secondAttribute="top" id="Fq7-6P-pmY"/>
+                        <constraint firstAttribute="trailing" secondItem="Tdm-1o-ymm" secondAttribute="trailing" id="Rmr-FE-zMs"/>
                         <constraint firstAttribute="height" constant="64" id="d9e-lq-Ptm"/>
                     </constraints>
                 </view>

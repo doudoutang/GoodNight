@@ -7,8 +7,9 @@
 //
 
 #import "DiaryViewController.h"
-
+#import "addDiaryViewController.h"
 @interface DiaryViewController ()
+- (IBAction)addDiary:(UIButton *)sender;
 
 @end
 
@@ -34,4 +35,8 @@
 }
 */
 
+- (IBAction)addDiary:(UIButton *)sender {
+    addDiaryViewController * writeDiaryVC = [[addDiaryViewController alloc]init];
+    [self.navigationController pushViewController:writeDiaryVC animated:YES];
+}
 @end

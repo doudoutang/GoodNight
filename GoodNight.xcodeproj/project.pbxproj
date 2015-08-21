@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C218B0621B85D1350088096C /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C218B0601B85D1350088096C /* DiaryTableViewCell.m */; };
+		C218B0631B85D1350088096C /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C218B0611B85D1350088096C /* DiaryTableViewCell.xib */; };
+		C218B0671B860BD60088096C /* addDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C218B0651B860BD60088096C /* addDiaryViewController.m */; };
+		C218B0681B860BD60088096C /* addDiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C218B0661B860BD60088096C /* addDiaryViewController.xib */; };
 		C2289FD51B85AE19005F39B6 /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2289FD31B85AE19005F39B6 /* DiaryViewController.m */; };
 		C2289FD61B85AE19005F39B6 /* DiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */; };
 		C24A9A1D1B85711700371E58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A99F91B85711700371E58 /* AppDelegate.m */; };
@@ -58,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C218B05F1B85D1350088096C /* DiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableViewCell.h; sourceTree = "<group>"; };
+		C218B0601B85D1350088096C /* DiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableViewCell.m; sourceTree = "<group>"; };
+		C218B0611B85D1350088096C /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		C218B0641B860BD60088096C /* addDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addDiaryViewController.h; sourceTree = "<group>"; };
+		C218B0651B860BD60088096C /* addDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addDiaryViewController.m; sourceTree = "<group>"; };
+		C218B0661B860BD60088096C /* addDiaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addDiaryViewController.xib; sourceTree = "<group>"; };
 		C2289FD21B85AE19005F39B6 /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
 		C2289FD31B85AE19005F39B6 /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
 		C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryViewController.xib; sourceTree = "<group>"; };
@@ -238,6 +248,9 @@
 				C2289FD21B85AE19005F39B6 /* DiaryViewController.h */,
 				C2289FD31B85AE19005F39B6 /* DiaryViewController.m */,
 				C2289FD41B85AE19005F39B6 /* DiaryViewController.xib */,
+				C218B0641B860BD60088096C /* addDiaryViewController.h */,
+				C218B0651B860BD60088096C /* addDiaryViewController.m */,
+				C218B0661B860BD60088096C /* addDiaryViewController.xib */,
 				C24A9A181B85711700371E58 /* MusicViewController.h */,
 				C24A9A191B85711700371E58 /* MusicViewController.m */,
 				C24A9A501B85CEF300371E58 /* ReadTableViewController.h */,
@@ -253,6 +266,9 @@
 				C24A9A4B1B85CEAB00371E58 /* ReadTableViewCell.h */,
 				C24A9A4C1B85CEAB00371E58 /* ReadTableViewCell.m */,
 				C24A9A4D1B85CEAB00371E58 /* ReadTableViewCell.xib */,
+				C218B05F1B85D1350088096C /* DiaryTableViewCell.h */,
+				C218B0601B85D1350088096C /* DiaryTableViewCell.m */,
+				C218B0611B85D1350088096C /* DiaryTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C218B0681B860BD60088096C /* addDiaryViewController.xib in Resources */,
 				C2F0F8921B8576530074653A /* startBackImage.jpg in Resources */,
 				C24A9A201B85711700371E58 /* h2.jpg in Resources */,
 				C2F0F8961B8576530074653A /* wanan.png in Resources */,
@@ -419,6 +436,7 @@
 				C2F0F8951B8576530074653A /* sayImage.png in Resources */,
 				C24A9A1F1B85711700371E58 /* h1.jpg in Resources */,
 				C2F0F8931B8576530074653A /* sleepBackImage.png in Resources */,
+				C218B0631B85D1350088096C /* DiaryTableViewCell.xib in Resources */,
 				C2F0F8941B8576530074653A /* katong.png in Resources */,
 				C2F0F8911B8576530074653A /* HomeBack.jpg in Resources */,
 				C2C3BE581B8578C5002C975D /* sleepStrip.png in Resources */,
@@ -452,6 +470,8 @@
 				C2F0F85F1B8574E10074653A /* SleepRecordViewController.m in Sources */,
 				C24A9A251B85711700371E58 /* TAAnimatedDotView.m in Sources */,
 				C2F0F85A1B8574CE0074653A /* HomeViewController.m in Sources */,
+				C218B0621B85D1350088096C /* DiaryTableViewCell.m in Sources */,
+				C218B0671B860BD60088096C /* addDiaryViewController.m in Sources */,
 				C2289FD51B85AE19005F39B6 /* DiaryViewController.m in Sources */,
 				C24A9A2A1B85711700371E58 /* UIView+SDExtension.m in Sources */,
 				C29307021B84BC4A000A3DEF /* main.m in Sources */,

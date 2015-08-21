@@ -8,7 +8,12 @@
 
 #import "ReadTableViewController.h"
 #import "ReadTableViewCell.h"
+#import "AFNetworking.h"
+#import "ReadDetailViewController.h"
+
 @interface ReadTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *readArray;
 
 @end
 
@@ -19,6 +24,27 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ReadTableViewCell" bundle:nil] forCellReuseIdentifier:@"readCell"];
     
+
+    
+    //解析数据
+    [[DataBase shareInstance] getReadDataWithUrl:@"http://jtbk.vipappsina.com/yulu/card21/article26.php?pad=0&markId=0" result:^(id result) {
+        
+        NSArray *array = result;
+        for (NSDictionary *dict in array) {
+            Read *readModel = [[Read alloc] init];
+            [readModel setValuesForKeysWithDictionary:dict];
+            [self.readArray addObject:readModel];
+        }
+        [self.tableView reloadData];
+    }];
+}
+
+#pragma mark - 阅读数组懒加载
+- (NSMutableArray *)readArray {
+    if (!_readArray) {
+        self.readArray = [NSMutableArray array];
+    }
+    return _readArray;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,17 +61,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 10;
+    return self.readArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ReadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"readCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
+    Read *read = self.readArray[indexPath.row];
+    cell.titleLable.text = read.title;
+    cell.timeLable.text = read.cTime;
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:read.pic]];
     
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 270;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ReadDetailViewController *readDetailVC = [[ReadDetailViewController alloc] init];
+    
+    Read *read = self.readArray[indexPath.row];
+    readDetailVC.read = read;
+    
+    [self.navigationController pushViewController:readDetailVC animated:YES];
+    
+}
+
 
 
 /*

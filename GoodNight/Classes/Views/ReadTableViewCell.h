@@ -10,4 +10,10 @@
 
 @interface ReadTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *imgView;
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLable;
+
+@property (strong, nonatomic) IBOutlet UILabel *timeLable;
+
 @end

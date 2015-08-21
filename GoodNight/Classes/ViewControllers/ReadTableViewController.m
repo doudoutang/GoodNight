@@ -10,10 +10,16 @@
 #import "ReadTableViewCell.h"
 #import "AFNetworking.h"
 #import "ReadDetailViewController.h"
+#import "MJRefresh.h"
+
+#define kReadUrl @"http://jtbk.vipappsina.com/yulu/card21/article26.php?pad=0&markId="
 
 @interface ReadTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *readArray;
+
+
+@property (nonatomic, assign) NSInteger readCount;
 
 @end
 
@@ -34,7 +40,44 @@
     [self.tableView addSubview:refreshControl];
     [refreshControl beginRefreshing];
     [self refreshControlStateChange:refreshControl];
+    
+    __weak ReadTableViewController *readTVC = self;
+    [self.tableView addLegendFooterWithRefreshingBlock:^{
+        [readTVC setUpRefresh];
+    }];
 
+    
+
+}
+
+- (void)setUpRefresh {
+    //自动开始刷新
+//    [self.tableView footerBeginRefreshing];
+    
+    Read *read = [self.readArray lastObject];
+    NSInteger readIndex = [read.id integerValue] - 1;
+    NSString *readId = [NSString stringWithFormat:@"%ld",readIndex];
+    NSString *readUrl = [kReadUrl stringByAppendingString:readId];
+    
+    [[DataBase shareInstance] getReadDataWithUrl:readUrl result:^(id result) {
+        
+        if (result) {
+            NSArray *array = result;
+            for (NSDictionary *dict in array) {
+                Read *readModel = [[Read alloc] init];
+                [readModel setValuesForKeysWithDictionary:dict];
+                [self.readArray addObject:readModel];
+            }
+            [self.tableView reloadData];
+            [self.tableView.footer endRefreshing];
+        }else {
+            [self.tableView.footer endRefreshing];
+        }
+        
+        
+    }];
+
+    
 }
 
 - (void)refreshControlStateChange:(UIRefreshControl *)refreshControl {

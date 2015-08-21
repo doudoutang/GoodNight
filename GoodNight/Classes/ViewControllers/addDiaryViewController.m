@@ -123,7 +123,7 @@
     for (int i=0; i<2; i++) {
         for (int j=0; j<5; j++) {
             UIButton * buttonWeather =[UIButton buttonWithType:UIButtonTypeSystem];
-            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+10,40*i, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-30);
+            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+15,buttonView.frame.size.height/2*i, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-30);
             [buttonWeather addTarget:self action:@selector(choiceWeather:) forControlEvents:UIControlEventTouchUpInside];
             buttonWeather.titleLabel.text =[NSString stringWithFormat:@"weather%d%d.jpg",i,j];
             [buttonWeather setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
@@ -171,19 +171,19 @@
 #pragma mark - 改变底部view位置
 -(void)changeAllButtonView{
     self.storyTextField.frame =CGRectMake(10, CGRectGetMaxY(self.lableView.frame)+10, self.backView.frame.size.width-20, self.backView.frame.size.height-self.backView.frame.size.height/3-20-zhuangtailan);
-    self.allButtonView.frame = CGRectMake(10,CGRectGetMaxY(self.storyTextField.frame)+10, self.backView.frame.size.width-20, self.backView.frame.size.height/5);
+    self.allButtonView.frame = CGRectMake(10,CGRectGetMaxY(self.storyTextField.frame)+10, self.backView.frame.size.width-20, self.backView.frame.size.height/3);
 }
 #pragma mark - 变回来底部View
 -(void)changBackButtonView{
     self.storyTextField.frame = CGRectMake(10, CGRectGetMaxY(self.lableView.frame)+10, self.backView.frame.size.width-20, self.backView.frame.size.height-self.backView.frame.size.height/15-10-zhuangtailan);
-    self.allButtonView.frame =CGRectMake(10,CGRectGetMaxY(self.backView.frame)-self.backView.frame.size.height/15-10-zhuangtailan, self.backView.frame.size.width-20, self.backView.frame.size.height/5);
+    self.allButtonView.frame =CGRectMake(10,CGRectGetMaxY(self.backView.frame)-self.backView.frame.size.height/15-10-zhuangtailan, self.backView.frame.size.width-20, self.backView.frame.size.height/3);
 
 }
 
 #pragma mark - 回收键盘触发时间
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_storyTextField resignFirstResponder];
-    //[self changBackButtonView];
+    [self changBackButtonView];
 }
 #pragma mark - 实现协议里的方法监听键盘
 -(void)textViewDidBeginEditing:(UITextView *)textView{

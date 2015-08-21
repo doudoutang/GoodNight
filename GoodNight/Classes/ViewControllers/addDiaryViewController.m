@@ -42,7 +42,7 @@
     self.backView = [[UIView alloc]initWithFrame:CGRectMake(0, zhuangtailan, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-zhuangtailan)];
     //添加日记标题view
     self.lableView = [[UIView alloc]initWithFrame:CGRectMake(10, 10, self.backView.frame.size.width-20, self.backView.frame.size.height/15)];
-    _lableView.backgroundColor = [UIColor blueColor];
+    _lableView.backgroundColor = [UIColor whiteColor];
     
     //添加时间
     self.timeLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, self.lableView.frame.size.width/2, self.lableView.frame.size.height-20)];
@@ -119,7 +119,23 @@
 -(void)didWeather{
     [self changeAllButtonView];
     UIView * buttonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.buttonDetailView.frame.size.width, self.buttonDetailView.frame.size.height)];
-    buttonView.backgroundColor = [UIColor cyanColor];
+    buttonView.backgroundColor = [UIColor whiteColor];
+    for (int i=0; i<2; i++) {
+        for (int j=0; j<5; j++) {
+            UIButton * buttonWeather =[UIButton buttonWithType:UIButtonTypeSystem];
+            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+10,40*i, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-30);
+            [buttonWeather addTarget:self action:@selector(choiceWeather:) forControlEvents:UIControlEventTouchUpInside];
+            buttonWeather.titleLabel.text =[NSString stringWithFormat:@"weather%d%d.jpg",i,j];
+            [buttonWeather setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+            [buttonWeather setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"weather%d%d.jpg",i,j]] forState:UIControlStateNormal];
+            [buttonView addSubview:buttonWeather];
+            
+        }
+    }
+    
+    
+    
+    
     [_buttonDetailView addSubview: buttonView];
 }
 #pragma mark 位置事件
@@ -128,7 +144,7 @@
     UIView * buttonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.buttonDetailView.frame.size.width, self.buttonDetailView.frame.size.height)];
     buttonView.backgroundColor = [UIColor greenColor];
     [_buttonDetailView addSubview: buttonView];
-    
+
     [self.locationManager requestAlwaysAuthorization];
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
@@ -139,6 +155,9 @@
     UIView * buttonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.buttonDetailView.frame.size.width, self.buttonDetailView.frame.size.height)];
     buttonView.backgroundColor = [UIColor redColor];
 
+    
+    
+    
     [_buttonDetailView addSubview: buttonView];
 }
 #pragma mark 心情事件
@@ -164,7 +183,7 @@
 #pragma mark - 回收键盘触发时间
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_storyTextField resignFirstResponder];
-    [self changBackButtonView];
+    //[self changBackButtonView];
 }
 #pragma mark - 实现协议里的方法监听键盘
 -(void)textViewDidBeginEditing:(UITextView *)textView{
@@ -178,6 +197,11 @@
 }
 -(void)textViewDidChangeSelection:(UITextView *)textView{
     
+}
+#pragma mark - 天气点击事件
+-(void)choiceWeather:(id)sender{
+    UIButton * button = sender;
+    _weatherImageView.image = [UIImage imageNamed:button.titleLabel.text];
 }
 #pragma mark - 各种懒加载
 -(CLLocationManager *)locationManager{

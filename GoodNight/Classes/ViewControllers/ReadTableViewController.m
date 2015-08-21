@@ -24,19 +24,68 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ReadTableViewCell" bundle:nil] forCellReuseIdentifier:@"readCell"];
     
-
+    self.navigationItem.title = @"美文欣赏";
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    
+    [refreshControl addTarget:self action:@selector(refreshControlStateChange:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView addSubview:refreshControl];
+    [refreshControl beginRefreshing];
+    [self refreshControlStateChange:refreshControl];
+
+}
+
+- (void)refreshControlStateChange:(UIRefreshControl *)refreshControl {
     //解析数据
+    
     [[DataBase shareInstance] getReadDataWithUrl:@"http://jtbk.vipappsina.com/yulu/card21/article26.php?pad=0&markId=0" result:^(id result) {
         
-        NSArray *array = result;
-        for (NSDictionary *dict in array) {
-            Read *readModel = [[Read alloc] init];
-            [readModel setValuesForKeysWithDictionary:dict];
-            [self.readArray addObject:readModel];
+        if (result) {
+            NSArray *array = result;
+            for (NSDictionary *dict in array) {
+                Read *readModel = [[Read alloc] init];
+                [readModel setValuesForKeysWithDictionary:dict];
+                [self.readArray addObject:readModel];
+            }
+            [refreshControl endRefreshing];
+            [self.tableView reloadData];
+        }else {
+            [refreshControl endRefreshing];
         }
-        [self.tableView reloadData];
+        
     }];
+    
+    /*
+//    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
+//    
+//    NSString *url = [@"http://jtbk.vipappsina.com/yulu/card21/article26.php?pad=0&markId=0" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    
+//    manager.securityPolicy.allowInvalidCertificates = YES;
+//    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    
+//    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        
+//        NSData *data = [operation.responseString dataUsingEncoding:NSUTF8StringEncoding];
+//        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+//        NSArray *array = result;
+//        for (NSDictionary *dict in array) {
+//            Read *readModel = [[Read alloc] init];
+//            [readModel setValuesForKeysWithDictionary:dict];
+//            [self.readArray addObject:readModel];
+//        }
+//        
+//        [self.tableView reloadData];
+//        [refreshControl endRefreshing];
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        NSLog(@"function == %s  line == %d  error == %@",__FUNCTION__,__LINE__,error);
+//        [refreshControl endRefreshing];
+//    }];
+*/
+    
 }
 
 #pragma mark - 阅读数组懒加载
@@ -67,6 +116,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ReadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"readCell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor clearColor];
     Read *read = self.readArray[indexPath.row];
     cell.titleLable.text = read.title;
     cell.timeLable.text = read.cTime;
@@ -82,6 +132,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ReadDetailViewController *readDetailVC = [[ReadDetailViewController alloc] init];
+    
     
     Read *read = self.readArray[indexPath.row];
     readDetailVC.read = read;

@@ -9,7 +9,7 @@
 #import "addDiaryViewController.h"
 #import <MapKit/MapKit.h>
 #define zhuangtailan 64
-@interface addDiaryViewController ()<UITextViewDelegate,CLLocationManagerDelegate>
+@interface addDiaryViewController ()<UITextViewDelegate,CLLocationManagerDelegate,UIActionSheetDelegate>
 @property (nonatomic,strong) UITextView * storyTextField;//输入框
 @property (strong, nonatomic) IBOutlet UIView *backView;
 @property (strong, nonatomic) UIView * lableView;//标题View
@@ -24,8 +24,14 @@
 @property (strong,nonatomic) UIButton * buttonFeel;//心情按钮
 @property (strong,nonatomic) UIView * buttonDetailView;//button详情View
 @property (strong,nonatomic) CLLocationManager * locationManager;//
-@end
+@property (strong,nonatomic) UIButton * buttonPic1;//图片button
+@property (strong,nonatomic) UIButton * buttonPic2;
+@property (strong,nonatomic) UIButton * buttonPic3;
+@property (strong,nonatomic) UIButton * buttonPic4;
 
+
+@end
+static BOOL keyboardHide = NO;
 @implementation addDiaryViewController
 
 - (void)viewDidLoad {
@@ -33,6 +39,27 @@
     UIBarButtonItem * rightButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
     self.navigationItem.rightBarButtonItem = rightButton;
     // Do any additional setup after loading the view from its nib.
+    //增加监听，当键盘出现或改变时收出消息
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWillShow:)
+     
+                                                 name:UIKeyboardWillShowNotification
+     
+                                               object:nil];
+    
+    
+    
+    //增加监听，当键退出时收出消息
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWillHide:)
+     
+                                                 name:UIKeyboardWillHideNotification
+     
+                                               object:nil];
     [self addTestField];//添加各种view
 }
 -(void)addTestField{
@@ -50,17 +77,17 @@
     [_lableView addSubview:_timeLable];
     
     //添加心情
-    self.feelImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-self.lableView.frame.size.height, 10, self.lableView.frame.size.height-20, self.lableView.frame.size.height-20)];
+    self.feelImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-self.lableView.frame.size.height, 5, self.lableView.frame.size.height-10, self.lableView.frame.size.height-10)];
     _feelImageView.image = [UIImage imageNamed:@"katong.png"];
     [_lableView addSubview:_feelImageView];
     
     //添加天气
-    self.weatherImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-(self.lableView.frame.size.height*2), 10, self.lableView.frame.size.height-20, self.lableView.frame.size.height-20)];
+    self.weatherImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-(self.lableView.frame.size.height*2), 5, self.lableView.frame.size.height-10, self.lableView.frame.size.height-10)];
     _weatherImageView.image = [UIImage imageNamed:@"katong.png"];
     [_lableView addSubview:_weatherImageView];
     
     //添加地址
-    self.addressImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-(self.lableView.frame.size.height*3), 10, self.lableView.frame.size.height-20, self.lableView.frame.size.height-20)];
+    self.addressImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.lableView.frame)-(self.lableView.frame.size.height*3), 5, self.lableView.frame.size.height-10, self.lableView.frame.size.height-10)];
     _addressImageView.image = [UIImage imageNamed:@"katong.png"];
     [_lableView addSubview:_addressImageView];
     
@@ -123,7 +150,7 @@
     for (int i=0; i<2; i++) {
         for (int j=0; j<5; j++) {
             UIButton * buttonWeather =[UIButton buttonWithType:UIButtonTypeSystem];
-            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+15,buttonView.frame.size.height/2*i, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-30);
+            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+15,buttonView.frame.size.height/2*i+10, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-40);
             [buttonWeather addTarget:self action:@selector(choiceWeather:) forControlEvents:UIControlEventTouchUpInside];
             buttonWeather.titleLabel.text =[NSString stringWithFormat:@"weather%d%d.jpg",i,j];
             [buttonWeather setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
@@ -132,9 +159,6 @@
             
         }
     }
-    
-    
-    
     
     [_buttonDetailView addSubview: buttonView];
 }
@@ -153,9 +177,39 @@
 -(void)didPicture{
     [self changeAllButtonView];
     UIView * buttonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.buttonDetailView.frame.size.width, self.buttonDetailView.frame.size.height)];
-    buttonView.backgroundColor = [UIColor redColor];
-
+    buttonView.backgroundColor = [UIColor whiteColor];
     
+    self.buttonPic1 =[UIButton buttonWithType:UIButtonTypeSystem];
+    _buttonPic1.frame = CGRectMake(15,10, buttonView.frame.size.width/2-30, buttonView.frame.size.height/2-40);
+    [_buttonPic1 addTarget:self action:@selector(choicePicture:) forControlEvents:UIControlEventTouchUpInside];
+    [_buttonPic1 setBackgroundImage:[UIImage imageNamed:@"katong.png"]forState:UIControlStateNormal];
+    _buttonPic1.titleLabel.text =@"picture1";
+    [_buttonPic1 setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [buttonView addSubview:_buttonPic1];
+
+    self.buttonPic1 =[UIButton buttonWithType:UIButtonTypeSystem];
+    _buttonPic1.frame = CGRectMake(buttonView.frame.size.width/2+15,10, buttonView.frame.size.width/2-30, buttonView.frame.size.height/2-40);
+    [_buttonPic1 addTarget:self action:@selector(choicePicture:) forControlEvents:UIControlEventTouchUpInside];
+    [_buttonPic1 setBackgroundImage:[UIImage imageNamed:@"katong.png"]forState:UIControlStateNormal];
+    _buttonPic1.titleLabel.text =@"picture2";
+    [_buttonPic1 setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [buttonView addSubview:_buttonPic1];
+    
+    self.buttonPic1 =[UIButton buttonWithType:UIButtonTypeSystem];
+    _buttonPic1.frame = CGRectMake(15,buttonView.frame.size.height/2+10, buttonView.frame.size.width/2-30, buttonView.frame.size.height/2-40);
+    [_buttonPic1 addTarget:self action:@selector(choicePicture:) forControlEvents:UIControlEventTouchUpInside];
+    [_buttonPic1 setBackgroundImage:[UIImage imageNamed:@"katong.png"]forState:UIControlStateNormal];
+    _buttonPic1.titleLabel.text =@"picture3";
+    [_buttonPic1 setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [buttonView addSubview:_buttonPic1];
+    
+    self.buttonPic1 =[UIButton buttonWithType:UIButtonTypeSystem];
+    _buttonPic1.frame = CGRectMake(buttonView.frame.size.width/2+15,buttonView.frame.size.height/2+10, buttonView.frame.size.width/2-30, buttonView.frame.size.height/2-40);
+    [_buttonPic1 addTarget:self action:@selector(choicePicture:) forControlEvents:UIControlEventTouchUpInside];
+    [_buttonPic1 setBackgroundImage:[UIImage imageNamed:@"katong.png"]forState:UIControlStateNormal];
+    _buttonPic1.titleLabel.text =@"picture4";
+    [_buttonPic1 setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [buttonView addSubview:_buttonPic1];
     
     
     [_buttonDetailView addSubview: buttonView];
@@ -164,8 +218,19 @@
 -(void)didFeel{
     [self changeAllButtonView];
     UIView * buttonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.buttonDetailView.frame.size.width, self.buttonDetailView.frame.size.height)];
-    buttonView.backgroundColor = [UIColor yellowColor];
-
+    buttonView.backgroundColor = [UIColor whiteColor];
+    for (int i=0; i<2; i++) {
+        for (int j=0; j<5; j++) {
+            UIButton * buttonWeather =[UIButton buttonWithType:UIButtonTypeSystem];
+            buttonWeather.frame = CGRectMake(buttonView.frame.size.width/5 * j+15,buttonView.frame.size.height/2*i+10, buttonView.frame.size.width/5-30, buttonView.frame.size.height/2-40);
+            [buttonWeather addTarget:self action:@selector(choiceFeel:) forControlEvents:UIControlEventTouchUpInside];
+            buttonWeather.titleLabel.text =[NSString stringWithFormat:@"feel%d%d.jpg",i,j];
+            [buttonWeather setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
+            [buttonWeather setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"feel%d%d.jpg",i,j]] forState:UIControlStateNormal];
+            [buttonView addSubview:buttonWeather];
+            
+        }
+    }
     [_buttonDetailView addSubview: buttonView];
 }
 #pragma mark - 改变底部view位置
@@ -179,29 +244,75 @@
     self.allButtonView.frame =CGRectMake(10,CGRectGetMaxY(self.backView.frame)-self.backView.frame.size.height/15-10-zhuangtailan, self.backView.frame.size.width-20, self.backView.frame.size.height/3);
 
 }
-
+#pragma mark - textField与键盘对齐
+-(void)changTextFieldForKeyboard{
+    
+    
+}
 #pragma mark - 回收键盘触发时间
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (keyboardHide) {
+        
+        [self changBackButtonView];
+        
+    }
     [_storyTextField resignFirstResponder];
-    [self changBackButtonView];
 }
 #pragma mark - 实现协议里的方法监听键盘
 -(void)textViewDidBeginEditing:(UITextView *)textView{
+    keyboardHide = YES;
+
+    
     
 }
 -(void)textViewDidChange:(UITextView *)textView{
     
 }
 -(void)textViewDidEndEditing:(UITextView *)textView{
-    
+    keyboardHide = NO;
+
 }
 -(void)textViewDidChangeSelection:(UITextView *)textView{
     
+    
 }
+#pragma mark - 实现监听里的方法
+- (void)keyboardWillShow:(NSNotification *)aNotification
+
+{
+    //获取键盘的高度
+    NSDictionary *userInfo = [aNotification userInfo];
+    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [aValue CGRectValue];
+    int height = keyboardRect.size.height;
+    self.storyTextField.frame = CGRectMake(10, CGRectGetMaxY(self.lableView.frame)+10, self.backView.frame.size.width-20, self.backView.frame.size.height-height-zhuangtailan);
+    
+}
+//当键退出时调用
+
+- (void)keyboardWillHide:(NSNotification *)aNotification
+
+{
+}
+
+
 #pragma mark - 天气点击事件
 -(void)choiceWeather:(id)sender{
     UIButton * button = sender;
     _weatherImageView.image = [UIImage imageNamed:button.titleLabel.text];
+}
+#pragma mark - 天气点击事件
+-(void)choiceFeel:(id)sender{
+    UIButton * button = sender;
+    _feelImageView.image = [UIImage imageNamed:button.titleLabel.text];
+}
+#pragma mark - 
+-(void)choicePicture:(id)sender{
+    UIActionSheet * action = [[UIActionSheet alloc]initWithTitle:@"选择一张图" delegate:self cancelButtonTitle:@"sdf"destructiveButtonTitle:@"sdfsd" otherButtonTitles:nil, nil];
+    [action showInView:_backView];
+    
+    
+    
 }
 #pragma mark - 各种懒加载
 -(CLLocationManager *)locationManager{
